@@ -1,0 +1,801 @@
+/* The font's that I was going to use were not having enbeded link to I download the fonts and put them in the public folder and then used them in the css file. */
+
+@font-face {
+  font-family: 'New Astro Light';
+  src: url('./Fonts/newAstroLight.otf');
+}
+
+@font-face {
+  font-family: 'New Astro Medium';
+  src: url('./Fonts/newAstroMedium.otf');
+}
+
+@font-face {
+  font-family: 'New Astro Bold';
+  src: url('./Fonts/newAstroBold.otf');
+}
+
+@font-face {
+  font-family: 'Neulis Light';
+  src: url('./Fonts//neulis-light.otf');
+}
+
+@font-face {
+  font-family: 'Neulis Medium';
+  src: url('./Fonts/neulis-regular.otf');
+}
+
+/* Universal Selector */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 15vh;
+  /* Giving the header a height of 15vh so that it can be responsive. */
+  box-shadow: #ccd8b7 0px 50px 100px -20px, #ccd8b7 0px 30px 60px -30px,
+    #ccd8b7 0px -2px 8px 0px inset;
+  /* Giving the header a box shadow. */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 80px;
+}
+
+.img {
+  width: 90px;
+  /* Giving the image a width of 90px so that it can be responsive. */
+  animation: rotate-logo 10s infinite;
+  /* Giving the image a animation of rotate-logo. */
+}
+
+.link_box {
+  display: flex;
+  gap: 20px;
+}
+
+.link_box a {
+  text-decoration: none;
+  /* Removing the underline from the links. */
+}
+
+.header_link {
+  color: #6b7f4b;
+  font-family: 'New Astro Bold';
+  font-size: 1.5rem;
+  text-shadow: 6px 5px 8px #d3e1bf;
+  text-transform: uppercase;
+  /* Uppercase all line */
+}
+
+.header_link:hover {
+  font-size: 1.7rem;
+  transition: 0.5s;
+  text-decoration: underline;
+  /* Adding underline to the links on hover. */
+  cursor: pointer;
+}
+
+.hero_section {
+  height: 80vh;
+  background-image: url('./Images/hero-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Making the background image responsive. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero_heading {
+  color: #ffffff;
+  font-family: 'Neulis Medium';
+  font-size: 10rem;
+  text-shadow: 6px 5px 8px #d3e1bf;
+}
+
+.hero_description {
+  color: #ffffff;
+  font-family: 'Neulis Medium';
+  font-size: 2.5rem;
+  text-shadow: 6px 5px 8px #d3e1bf;
+}
+
+.button_section {
+  height: 35vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.button {
+  color: #6b7f4b;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  font-family: 'Neulis Medium';
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  border-radius: 40px;
+}
+
+.white_button {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Giving Hover and Focus effect to the buttons.  */
+.button:hover,
+.button:focus {
+  border-color: #6b7f4b;
+}
+
+.white_button:hover,
+.white_button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em #ffffff;
+  -webkit-transform: translateY(-0.25em);
+  transform: translateY(-0.25em);
+  border-color: #ffffff;
+}
+
+.services {
+  height: auto;
+  padding: 80px;
+  box-shadow: #6b7f4b 0px -50px 36px -28px inset;
+}
+
+.services .heading {
+  font-family: 'New Astro Bold';
+  font-size: 6rem;
+  color: #6b7f4b;
+  text-align: center;
+  text-shadow: 6px 5px 8px #d3e1bf;
+}
+
+.services .question {
+  color: #6b7f4b;
+  font-family: 'Neulis Medium';
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  line-height: 2;
+  text-align: start;
+  text-shadow: 1px 1px 2px black;
+}
+
+.services .answer {
+  color: #849468;
+  font-family: 'Neulis Light';
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  text-align: justify;
+  /* Making the text responsive. */
+}
+
+.question_box {
+  margin: 40px 0px;
+}
+
+.services .sub_services {
+  display: flex;
+  gap: 30px;
+}
+
+.sub_services_inner_div {
+  width: 50%;
+}
+
+.contact_us {
+  height: auto;
+  background-image: url('./Images/contact-us.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact_form {
+  background-color: rgba(204, 216, 183, 0.6);
+  width: 80%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.contact_details {
+  margin: 10px 0px;
+  font-family: 'Neulis Medium';
+  font-size: 0.7rem;
+  line-height: 1.4;
+  letter-spacing: 1px;
+}
+
+.contact_form h3 {
+  color: #6b7f4b;
+  font-size: 3rem;
+  font-family: 'New Astro Bold';
+}
+
+label {
+  display: block;
+  margin: 10px 0px;
+  font-family: 'Neulis Medium';
+}
+
+.submit {
+  width: 100%;
+  text-shadow: 1px 1px 2px black;
+}
+
+.our_team {
+  height: auto;
+  background-color: #6b7f4b;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.our_team h3 {
+  /* Heading To div */
+  color: #ffffff;
+  font-family: 'New Astro Bold';
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 6px 5px 8px #d3e1bf;
+  letter-spacing: 1.2px;
+}
+
+.our_team .our_team_parent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.our_team .our_team_parent .card {
+  flex-grow: 1;
+  flex-basis: 200px;
+  min-width: 300px;
+  background-color: #fff;
+  min-height: 300px;
+  border-radius: 15px;
+  box-shadow: #fff 1px 1px 20px 0px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card .profile {
+  width: 300px;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: #6b7f4b 1px 1px 20px 0px;
+}
+
+.card .name {
+  font-family: 'New Astro Bold';
+  font-size: 1.5rem;
+  color: #6b7f4b;
+  text-align: center;
+  text-shadow: 6px 5px 8px #d3e1bf;
+  letter-spacing: 1.2px;
+}
+
+.card .profession {
+  font-family: 'Neulis Medium';
+  font-size: 1rem;
+  text-align: center;
+  text-shadow: 6px 5px 8px #d3e1bf;
+  letter-spacing: 1.2px;
+}
+
+.working_hours {
+  font-family: 'Neulis Medium';
+  font-size: 0.7rem;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  height: auto;
+  padding: 80px;
+}
+
+.working_hours .inner_div {
+  box-shadow: #6b7f4b 0px 50px 100px -20px, #6b7f4b 0px 30px 60px -30px,
+    #6b7f4b 0px -2px 6px 0px inset;
+  height: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.working_hours .inner_div h3 {
+  color: #6b7f4b;
+  font-size: 3rem;
+  font-family: 'New Astro Bold';
+  text-align: center;
+}
+
+.working_hours .inner_div p {
+  color: #000000;
+  font-family: 'Neulis Light';
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  text-align: center;
+  border: 1px dashed #6b7f4b;
+  display: inline-block;
+  width: 20%;
+  border-radius: 10px;
+}
+
+.working_hours .inner_div table tr td:first-child {
+  color: #6b7f4b;
+  font-size: large;
+  padding-right: 40px;
+}
+
+.working_hours .inner_div table tr td:last-child {
+  font-size: large;
+}
+
+/* Footer Css */
+.footer {
+  background-color: #6b7f4b;
+  padding: 80px 0;
+}
+
+.footer_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer_div {
+  max-width: 90%;
+  margin: auto;
+}
+
+/* Making the footer responsive. */
+.form-input {
+  padding: 10px 15px 10px;
+  width: 100%;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  font-size: 20px;
+  line-height: 1.875rem;
+  font-family: 'Neulis Light';
+}
+
+ol {
+  list-style: none;
+  /* Removing the bullet points from the list. */
+}
+
+.footer_inner_div {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer_inner_div h3 {
+  font-size: 1.125rem;
+  color: #d3e1bf;
+  margin-bottom: 30px;
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'New Astro Bold';
+}
+
+.footer_inner_div h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #d3e1bf;
+  width: 50px;
+  height: 2px;
+}
+
+.footer_inner_div ol li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer_inner_div ol li a {
+  color: #d3e1bf;
+  display: block;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Neulis Light';
+}
+
+.footer_inner_div ol li a:hover {
+  color: #fff;
+  padding-left: 7px;
+}
+
+.footer_inner_div .social-links a {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 10px 10px 0;
+  line-height: 40px;
+  transition: all 0.5s ease;
+}
+
+.footer_inner_div .social-links a:hover {
+  color: #151515;
+  background-color: #fff;
+}
+
+.terms_and_conditions {
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 80px;
+  font-family: 'Neulis Light';
+}
+
+.about_hero {
+  min-height: 55vh;
+  background-image: url('./Images/about-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about_hero_div {
+  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 55vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about_hero_div h3 {
+  color: #ffffff;
+  font-family: 'New Astro Bold';
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 6px 5px 8px #d3e1bf;
+}
+
+.about_hero_div p {
+  color: #ffffff;
+  font-family: 'Neulis Medium';
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: 6px 5px 8px #d3e1bf;
+}
+
+.about_origin {
+  background-color: #6b7f4b;
+  min-height: 30vh;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about_origin .heading {
+  color: #ffffff;
+  font-family: 'New Astro Bold';
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 6px 5px 8px #d3e1bf;
+}
+
+.about_origin .description {
+  color: #ffffff;
+  font-family: 'Neulis Medium';
+  font-size: 1.2rem;
+  text-align: center;
+  text-shadow: 6px 5px 8px #d3e1bf;
+}
+
+.about_origin .para {
+  color: #ffffff;
+  font-family: 'Neulis Light';
+  font-size: 1rem;
+  text-align: center;
+  text-shadow: 6px 5px 8px #d3e1bf;
+}
+
+.location {
+  min-height: 30vh;
+  padding: 80px;
+}
+
+.location h3 {
+  color: #6b7f4b;
+  font-family: 'New Astro Bold';
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 6px 5px 8px #d3e1bf;
+  margin-bottom: 20px;
+}
+
+.location table tr {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.location table td {
+  font-family: 'Neulis Medium';
+  font-size: 1.2rem;
+  text-align: center;
+  text-shadow: 6px 5px 8px #d3e1bf;
+  margin-bottom: 20px;
+}
+
+.doctors_appointment {
+  min-height: 30vh;
+  padding: 80px;
+}
+
+.doctors_appointment h3 {
+  color: #6b7f4b;
+  font-family: 'New Astro Bold';
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 6px 5px 8px #d3e1bf;
+  margin-bottom: 80px;
+}
+
+.doctors_appointment .doctor_card {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.doctor_card .description h4 {
+  color: #6b7f4b;
+  font-family: 'New Astro Bold';
+  font-size: 1.5rem;
+  text-shadow: 6px 5px 8px #d3e1bf;
+  margin-bottom: 20px;
+}
+
+.doctor_card .description h5 {
+  color: #6b7f4b;
+  font-family: 'Neulis Medium';
+  font-size: 1rem;
+  text-shadow: 6px 5px 8px #d3e1bf;
+  margin-bottom: 20px;
+}
+
+.doctor_card .description p {
+  color: #6b7f4b;
+  font-family: 'Neulis Light';
+  font-size: 1rem;
+  text-shadow: 6px 5px 8px #d3e1bf;
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.doctors_appointment .doctor_card .profile {
+  width: 250px;
+  height: 200px;
+  border-radius: 10%;
+  box-shadow: #6b7f4b 1px 1px 20px 0px;
+}
+
+/* Rotating the logo */
+@keyframes rotate-logo {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Responsive Css */
+@media only screen and (max-width: 900px) {
+  .header_link {
+    font-size: 1.2rem;
+  }
+
+  .img {
+    width: 80px;
+  }
+
+  .hero_heading {
+    font-size: 6rem;
+  }
+
+  .hero_description {
+    font-size: 1.5rem;
+  }
+
+  header {
+    height: 13vh;
+  }
+
+  .button_section {
+    height: 30vh;
+  }
+
+  .button,
+  .white_button {
+    font-size: 1.2rem;
+  }
+
+  .services,
+  .contact_us,
+  .our_team,
+  .working_hours,
+  .about_origin,
+  .location,
+  .doctors_appointment {
+    padding: 40px;
+  }
+
+  .services .heading {
+    font-size: 4rem;
+  }
+
+  .services .question {
+    font-size: 1.2rem;
+  }
+
+  .services .answer {
+    font-size: 1rem;
+  }
+  .services .sub_services {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .sub_services_inner_div {
+    width: 100%;
+  }
+
+  .contact_form {
+    width: 100%;
+  }
+
+  .contact_form h3 {
+    font-size: 2rem;
+  }
+
+  .our_team {
+    gap: 20px;
+  }
+
+  .card .profile {
+    width: 200px;
+    height: 200px;
+  }
+  .card .name {
+    font-size: 1.2rem;
+  }
+
+  .card .profession {
+    font-size: 0.8rem;
+  }
+
+  .working_hours .inner_div h3 {
+    font-size: 2rem;
+  }
+
+  .working_hours .inner_div p {
+    width: 50%;
+  }
+
+  .about_hero_div h3 {
+    font-size: 3rem;
+  }
+
+  .about_origin .heading {
+    font-size: 2rem;
+  }
+
+  .doctors_appointment h3 {
+    font-size: 2rem;
+  }
+
+  .doctor_card .description h4 {
+    font-size: 1.2rem;
+  }
+
+  .doctor_card .description h5 {
+    font-size: 0.8rem;
+  }
+
+  .doctor_card .description p {
+    font-size: 0.8rem;
+  }
+
+  .button {
+    height: max-content !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer_inner_div {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header_link {
+    font-size: 0.8rem;
+  }
+
+  .img {
+    width: 50px;
+  }
+
+  .hero_heading {
+    font-size: 4rem;
+  }
+
+  .hero_description {
+    font-size: 1.2rem;
+  }
+
+  header {
+    height: 10vh;
+  }
+
+  .button,
+  .white_button {
+    font-size: 1rem;
+  }
+
+  .services .heading {
+    font-size: 3rem;
+  }
+
+  .working_hours .inner_div p {
+    width: 100%;
+  }
+
+  .about_hero_div h3 {
+    font-size: 2rem;
+  }
+
+  .about_hero_div p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 574px) {
+  .footer_inner_div {
+    width: 100%;
+  }
+}
